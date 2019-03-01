@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/github_list_repos/static/media/fontawesome-webfont.af7ae505.woff2"
   },
   {
-    "revision": "04ecb0d680c862ab7e81",
+    "revision": "80673c78478abaf2f98d",
     "url": "/github_list_repos/static/css/main.36f28251.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/github_list_repos/static/js/2.a3bd21ce.chunk.js"
   },
   {
-    "revision": "04ecb0d680c862ab7e81",
-    "url": "/github_list_repos/static/js/main.04ecb0d6.chunk.js"
+    "revision": "80673c78478abaf2f98d",
+    "url": "/github_list_repos/static/js/main.80673c78.chunk.js"
   },
   {
     "revision": "fee66e712a8a08eef5805a46892932ad",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/github_list_repos/static/css/2.7fe36530.chunk.css"
   },
   {
-    "revision": "50c6668c15acb34e1b5beb369644b088",
+    "revision": "20764c9daf5e1132291c5bc4f08bf20e",
     "url": "/github_list_repos/index.html"
   }
 ];
