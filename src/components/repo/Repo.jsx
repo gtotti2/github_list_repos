@@ -8,11 +8,10 @@ const headerProps = {
     icon: 'book',
     title: 'Repositório',
 }
-
 export default props =>
     <Main {...headerProps}>
         <div className="display-4">Listagem de commits do repositório <b>{props.location.pathname.split('/')[3]}</b></div>
         <hr />
-        <Search location={props.location.pathname} repo={props.location.pathname.split('/')[3]}/>
+        <Search location={props.location.pathname} user={props.location.pathname.split('/')[2]} repo={props.location.pathname.split('/')[3]}/>
         <RepoInfo location={props.location.pathname} />
     </Main>

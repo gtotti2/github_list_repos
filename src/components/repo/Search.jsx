@@ -7,11 +7,10 @@ const initialState = {
     searchText: ''
 }
 
-const baseUrl = 'https://api.github.com/repos/'
 
 
 class searchTerm extends Component {
-
+    
 
     state = { ...initialState }
 
@@ -23,14 +22,16 @@ class searchTerm extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        this.search(this.state.searchText, this.props.repo)
+        this.search(this.state.searchText, this.props.repo, this.props.user)
         e.currentTarget.reset();
-
     }
 
-    search = (query, repo) => {
-        console.log(query, repo,this)
-        Axios(`${baseUrl}/${this.props.location.split('/')[this.props.location.split('/').length - 2]}/${repo}/commits`).then(resp => {
+    search = (query, repo, user) => {
+        Axios({
+            method: 'get',
+            url: `https://api.github.com/search/commits?q=repo:${user}/${repo}+${query}`,
+            headers: { "Accept": "application/vnd.github.cloak-preview" },
+        }).then(resp => {
             this.setState({ results: resp.data })
         })
     }
