@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default props =>
-    <a href={`./repository/${props.owner}/${props.name}`}>{props.name}</a>
+    <Link to={`repository/${props.owner}/${props.name}`}>{props.name}</Link>

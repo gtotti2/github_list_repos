@@ -17,10 +17,15 @@ export default class RepoInfo extends Component {
             this.setState({ commits: resp.data })
         })
     }
+    renderConsole(info){
+        console.log(info)
+    }
+    
     renderRepos() {
         return (
             <div className="list" >
                 <div className="row">
+                    {this.renderConsole(this.state)}
                     <div className="col-12">{this.renderTable()}</div>
                 </div>
                 <hr />

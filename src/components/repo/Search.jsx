@@ -3,7 +3,7 @@ import Axios from 'axios'
 
 
 const initialState = {
-    results: [],
+    commits: [],
     searchText: ''
 }
 
@@ -32,7 +32,11 @@ class searchTerm extends Component {
             url: `https://api.github.com/search/commits?q=repo:${user}/${repo}+${query}`,
             headers: { "Accept": "application/vnd.github.cloak-preview" },
         }).then(resp => {
-            this.setState({ results: resp.data })
+            if(resp.data.total_count !== 0){
+                this.setState({ commits: resp.data.items })
+            }
+            
+            console.log(this.state)
         })
     }
 
